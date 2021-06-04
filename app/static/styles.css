@@ -1,0 +1,75 @@
+@font-face{
+    font-family: Roboto;
+    src: url('/static/fonts/RobotoCondensed-Regular.ttf');
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px !important;
+    text-align: center;
+    font-family: Roboto !important;
+    color: yellowgreen !important;
+}
+
+p {
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: justify;
+    color: #fff;
+    font-family: Roboto !important;
+}
+
+.row div select {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-family: Roboto !important;
+  margin: auto;
+
+}
+.row div button {
+    background-color: #f6CE00;    
+    border: none;
+    color: #222;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-family: Roboto !important;
+    margin: auto;
+    outline: none;
+  }
+
+.row div button:hover {
+    background-color: #d21800;
+    color: white;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.row div button:active {
+    background-color: #d21800;
+    transform: scale(1.3);
+    color: white;
+}
+
+.container {
+  padding-top: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.row {
+  height: 100%;
+}
+
+body {
+  background-color: #222222 !important;
+  width:100%;
+  margin:0;
+  height:100%;
+}
