@@ -1,13 +1,8 @@
-@font-face{
-    font-family: Roboto;
-    src: url('/static/fonts/RobotoCondensed-Regular.ttf');
-}
-
 h1 {
     font-weight: bold;
     font-size: 50px !important;
     text-align: center;
-    font-family: Roboto !important;
+    font-family: 'Roboto' !important;
     color: yellowgreen !important;
 }
 
@@ -17,7 +12,7 @@ p {
     margin-bottom: auto;
     text-align: justify;
     color: #fff;
-    font-family: Roboto !important;
+    font-family: 'Roboto' !important;
 }
 
 .row div select {
@@ -25,10 +20,11 @@ p {
   text-decoration: none;
   display: block;
   font-size: 16px;
-  font-family: Roboto !important;
+  font-family: 'Roboto' !important;
   margin: auto;
 
 }
+
 .row div button {
     background-color: #f6CE00;    
     border: none;
@@ -38,7 +34,7 @@ p {
     text-decoration: none;
     display: block;
     font-size: 16px;
-    font-family: Roboto !important;
+    font-family: 'Roboto' !important;
     margin: auto;
     outline: none;
   }
