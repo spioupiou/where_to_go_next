@@ -1,7 +1,7 @@
 import csv
 
 jp_cities = {}
-with open('app/database.csv', 'r') as database:
+with open('app/data/database.csv', 'r') as database:
     reader = csv.reader(database)
     next(reader)
     for row in reader:

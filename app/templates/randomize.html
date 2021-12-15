@@ -1,22 +1,6 @@
 {% include "layout.html" %}
 
 {% block content %}
-<div class="container w-100 h-100">
-
-	<div class="row align-items-center h-100">
-
-		<div class="col-xs 12 col-sm 12 col-md 12 col-lg-6 col-xl-6 align-self-center">
-			<h1>Where should you go next?</h1><br>
-	
-			<p>Not sure how to spend your next weekend in Japan? No worries, I've got your back!</p><br>
-	
-			<p>Japan is the largest island in the world and odds are that you have not seen everything yet. From the northern lands of Hokkaido
-				to the sub-tropical Okinawa archipelago, many adventures lie ahead.</p><br>
-			
-			<p>Please use the select menu if you wish to travel within a specific area, and click on the button to find out your next travel destination. 
-				You can also find information and some pictures on the main cities of Japan by clicking on the green city markers.</p><br> 
-			
-			<p>And if you are not convinced by the city that shows up on the map, you can try to press the button again.</p><br>
 
 			<form action="/randomize" method="post">
 					<select name="region" style="margin-bottom:20px;">
@@ -25,14 +9,14 @@
 					{% endfor %}
 					</select>
 					<button type="submit">Refresh</button>
-			</form>      
-			<br>
-			<br>
-		</div>
+			</form>
 
-		<div class="col-xs 12 col-sm 12 col-md 12 col-lg-6 col-xl-6 d-inline-flex p-2">{% include 'MyMap.html' %}</div>
+      <br>
+      <br>
+    </div>
 
-	</div>
-    
-</div>
+    <div class="col-xs 12 col-sm 12 col-md 12 col-lg-6 col-xl-6 d-inline-flex p-2">{% include 'MyMap.html' %}</div>
+
+    </div>
+  </div>
 {% endblock %}

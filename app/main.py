@@ -16,16 +16,9 @@ def index():
 
 @app.route("/randomize",  methods=["GET", "POST"])
 def randomize():
-    if request.method == "GET":
-        MyMap = basemap_layer()
-        map_plot(MyMap, jp_cities)
-        save_map(MyMap)
-        return render_template("index.html", regions=REGIONS)        
-
-    else:
-        MyMap = basemap_layer()
-        map_plot(MyMap, jp_cities)
-        region = request.form.get("region")
-        random_marker(MyMap, region)
-        save_map(MyMap)
-        return render_template("randomize.html", regions=REGIONS)
+    MyMap = basemap_layer()
+    map_plot(MyMap, jp_cities)
+    region = "All" if request.method == "GET" else request.form.get("region")
+    random_marker(MyMap, region)
+    save_map(MyMap)
+    return render_template("randomize.html", regions=REGIONS)

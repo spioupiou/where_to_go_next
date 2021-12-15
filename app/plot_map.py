@@ -13,7 +13,7 @@ def encode64(pic):
 
 
 def basemap_layer():
-    m = folium.Map(location=[39,136], tiles='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', 
+    m = folium.Map(location=[39,136], tiles='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
                    attr='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
                    prefer_canvas=True,
                    control_scale=True,
@@ -51,7 +51,7 @@ def map_plot(m, dico):
 
             marker = make_cplx_marker(coordinates, cplx_html, name)
             marker.add_to(m)
-        
+
         else:
             simple_html = f'''
             <div class="content">
@@ -88,7 +88,7 @@ def random_marker(m, region):
     icon = folium.Icon(icon="paper-plane", prefix="fa", color='green')
 
     if region == "All":
-        with open('app/jp.csv', 'r') as database:
+        with open('app/data/jp.csv', 'r') as database:
             reader = csv.reader(database)
             next(reader)
             mydict = {row[0]:(float(row[1]), float(row[2])) for row in reader}
@@ -98,13 +98,13 @@ def random_marker(m, region):
 
         random_marker = folium.Marker(location=random_coordinates, tooltip=random_city, icon=icon)
         random_marker.add_to(m)
-    
+
     else:
-        with open('app/%s.csv' % region, 'r') as database:
+        with open('app/data/%s.csv' % region, 'r') as database:
             reader = csv.reader(database)
             next(reader)
             mydict = {row[0]:(float(row[1]), float(row[2])) for row in reader}
-        
+
         random_city = random.choice(list(mydict.keys()))
         random_coordinates = mydict[random_city]
 
@@ -114,11 +114,3 @@ def random_marker(m, region):
 
 def save_map(m):
     m.save('app/templates/MyMap.html')
-
-
-        
-
-        
-
-
-
